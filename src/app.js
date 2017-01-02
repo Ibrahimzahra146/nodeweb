@@ -21,7 +21,7 @@ var controller = Botkit.slackbot({
 });
 
 var bot = controller.spawn({
-    token: "xoxb-120765451428-6huRugjg2YpvW0vdTy3nO1Ea"
+    token: ""
 }).startRTM();
 
 function sendNewMessage() {
