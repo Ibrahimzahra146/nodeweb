@@ -41,8 +41,8 @@
     "winston": "^2.1.1"
   },
   "scripts": {
-    "pretest": "jscs ./lib/",
-    "test": "mocha tests/*.js"
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
