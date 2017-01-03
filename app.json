@@ -5,8 +5,10 @@
   "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "facebook", "natural language"],
   "env": {
-    
-  },
+    "Bot_ACCESS_TOKEN": {
+      "description": "Bot access token for bot",
+      "value": ""
+    },
   "engines": {
     "node": "5.10.1"
   }
