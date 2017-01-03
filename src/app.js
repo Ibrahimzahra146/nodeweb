@@ -8,44 +8,15 @@ const async = require('async');
 const REST_PORT = (process.env.PORT || 5000);
 const APIAI_ACCESS_TOKEN = "";
 const APIAI_LANG = process.env.APIAI_LANG || 'en';
-const apiAiService = apiai(APIAI_ACCESS_TOKEN);
-var Botkit = require('./lib/Botkit.js');
-var Constants = require('./constants.js');
+const apiAiService = apiai(
+);
+var Botkit = require('.././lib/Botkit.js');
+var Constants = require('.././constants.js');
 var os = require('os');
 var db = require('node-localdb');
 
 
-var sessionId = uuid.v1();
-var controller = Botkit.slackbot({
-    debug: true,
-});
 
-var bot = controller.spawn({
-    token: ""
-}).startRTM();
-
-function sendNewMessage() {
-    var channel = "";
-
-    var message1 = {
-        'type': 'message',
-        'channel': "D3KATA1PY",
-        user: "U36MXABM2",
-        text: 'what is my name',
-        ts: '1482920918.000057',
-        team: "T2T2K05NC",
-        event: 'direct_message'
-    };
-    bot.startConversation(message1, function (err, convo) {
-        if (!err) {
-            console.log("arrive ");
-            convo.say('Ibrahim wants a vacation!');
-
-        }
-    });
-
-
-}
 function processEvent(event) {
     console.log("Ibrahim");
 
@@ -71,7 +42,8 @@ app.get('/webhook/', (req, res) => {
 app.post('/webhook/', (req, res) => {
     try {
         var data = JSONbig.parse(req.body);
-        sendNewMessage();
+        processEvent("Ibrahim");
+        //sendNewMessage();
         return res.status(200).json({
             status: "ok"
         });
