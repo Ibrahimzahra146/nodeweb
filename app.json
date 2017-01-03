@@ -8,7 +8,8 @@
     "Bot_ACCESS_TOKEN": {
       "description": "Bot access token for bot",
       "value": ""
-    },
+    }
+  },
   "engines": {
     "node": "5.10.1"
   }
